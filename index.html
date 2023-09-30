@@ -1,11 +1,48 @@
 <html lang="cs">
-  <!DOCTYPE html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Dolní Líštná</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-  <body>
-    <h1>Dolní Líštná</h1>
-  </body>
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Dolní Líštná</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <h1>Dolní Líštná</h1>
+  <div id="events"></div>
+  <template id="evtTemplate">
+    <div class="calEvent">
+      <div class="evtDateCol">
+        <p class="flex flex-row px-3 text-xl pb-2">
+          <span class="w-12 pr-12 font-thin evtWeekDay"></span>
+          <span class="w-6 text-right font-medium evtDate"></span>
+          <span class="w-12 pl-3 font-medium evtMonth"></span>
+          <span class="w-16 text-right font-thin evtTime"></span>
+          <span class="flex-grow w-24 text-justify pl-8 font-semibold evtTitle"></span>
+        </p>
+        <div class="evtDescriptionCol text-blue-600">
+          <div class="evtTitleDetail">
+            <p class="flex flex-row flex-row items-center">
+              <span class="w-16 ml-1"></span>
+              <span class="w-16 ml-8"></span>
+              <span class="evtDetail font-weight-normal text-muted w-auto ml-16"></span>
+            </p>
+          </div>
+          <div class="font-weight-normal">
+            <p>
+              <span class="w-16 ml-1"></span>
+              <span class="w-16 ml-8"></span>
+              <span class="evtLinks w-auto ml-48"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="js/lib/luxon.min.js"></script>
+  <script src="js/google-access.js"></script>
+  <script src="js/events.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
 </html>
